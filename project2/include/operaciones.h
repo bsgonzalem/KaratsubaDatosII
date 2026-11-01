@@ -6,12 +6,12 @@
 
 using namespace std;
 
-string sumar(const string& A, const string& B);
+string add(const string& A, const string& B);
 
-string restar(const string& A, const string& B);
+string subtract(const string& A, const string& B);
 
-string desplazar(const string& A, int k);
+string shift(const string& A, int k);
 
-pair<string, string> partir(const string& A, int m);
+pair<string, string> split(const string& A, int m);
 
 #endif
