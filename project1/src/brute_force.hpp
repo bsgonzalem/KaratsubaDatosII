@@ -14,7 +14,7 @@ namespace BruteForce {
         unsigned int candidates;
 
         double time;
- 
+
         std::string generateCandidates(
             std::string targetHash,
             std::string alphabet,
