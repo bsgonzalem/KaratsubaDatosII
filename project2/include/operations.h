@@ -1,5 +1,5 @@
-#ifndef OPERACIONES_H
-#define OPERACIONES_H
+#ifndef OPERATIONS_H
+#define OPERATIONS_H
 
 #include <string>
 #include <utility>
@@ -13,5 +13,7 @@ string subtract(const string& A, const string& B);
 string shift(const string& A, int k);
 
 pair<string, string> split(const string& A, int m);
+
+string normalize(const string& A);
 
 #endif
