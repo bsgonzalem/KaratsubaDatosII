@@ -1,9 +1,74 @@
+
 #include <iostream>
+#include "operations.h"
+#include "classic.h"
+
 using namespace std;
 
 int main() {
 
-    cout << "practica II" << endl;
+    cout << "====================================" << endl;
+    cout << "   PRACTICA 2 - KARATSUBA TESTS" << endl;
+    cout << "====================================" << endl;
+
+    // 1. Testing normalize
+    cout << "\n1. Testing normalize:" << endl;
+
+    cout << "000123 -> " << normalize("000123") << endl;
+    cout << "0000 -> " << normalize("0000") << endl;
+    cout << "001050 -> " << normalize("001050") << endl;
+
+    // 2. Testing addition
+    cout << "\n2. Testing addition:" << endl;
+
+    cout << "123 + 456 = " << add("123", "456") << endl;
+    cout << "999 + 1 = " << add("999", "1") << endl;
+    cout << "12345 + 678 = " << add("12345", "678") << endl;
+    cout << "000123 + 000456 = " << add("000123", "000456") << endl;
+    cout << "0 + 0 = " << add("0", "0") << endl;
+
+    // 3. Testing subtraction
+    cout << "\n3. Testing subtraction:" << endl;
+
+    cout << "456 - 123 = " << subtract("456", "123") << endl;
+    cout << "1000 - 1 = " << subtract("1000", "1") << endl;
+    cout << "500 - 250 = " << subtract("500", "250") << endl;
+    cout << "100 - 99 = " << subtract("100", "99") << endl;
+    cout << "000456 - 000123 = " << subtract("000456", "000123") << endl;
+
+    // 4. Testing shift
+    cout << "\n4. Testing shift:" << endl;
+
+    cout << "123 shifted by 1 = " << shift("123", 1) << endl;
+    cout << "456 shifted by 2 = " << shift("456", 2) << endl;
+    cout << "89 shifted by 3 = " << shift("89", 3) << endl;
+    cout << "0 shifted by 3 = " << shift("0", 3) << endl;
+
+    // 5. Testing split
+    cout << "\n5. Testing split:" << endl;
+
+    auto parts1 = split("123456", 3);
+
+    cout << "123456 -> High: " << parts1.first
+         << ", Low: " << parts1.second << endl;
+
+    auto parts2 = split("98765432", 4);
+
+    cout << "98765432 -> High: " << parts2.first
+         << ", Low: " << parts2.second << endl;
+
+    // 6. Testing classic multiplication
+    cout << "\n6. Testing classic multiplication:" << endl;
+
+    cout << "123 * 456 = " << classicMultiply("123", "456") << endl;
+    cout << "99 * 99 = " << classicMultiply("99", "99") << endl;
+    cout << "1000 * 25 = " << classicMultiply("1000", "25") << endl;
+    cout << "123 * 0 = " << classicMultiply("123", "0") << endl;
+    cout << "000123 * 0045 = " << classicMultiply("000123", "0045") << endl;
+
+    cout << "\n====================================" << endl;
+    cout << "          TESTS COMPLETED" << endl;
+    cout << "====================================" << endl;
 
     return 0;
 }
