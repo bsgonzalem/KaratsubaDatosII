@@ -72,4 +72,4 @@ Se emplea `std::chrono::steady_clock` y se reportan microsegundos. Los tiempos d
 
 **Integrantes:** 
 - Alejandro Martínez Vivanco
-- Carlos
+- Brayan Santiago González Mateus
