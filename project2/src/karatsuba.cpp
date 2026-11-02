@@ -1,6 +1,6 @@
 #include "karatsuba.h"
 #include "operations.h"
-
+#include "classic.h"
 #include <algorithm>
 #include <string>
 
@@ -24,6 +24,13 @@ static string karatsuba(const string& A, const string& B) {
     if (a == "0" || b == "0") {
         return "0";
     }
+///Commit 6
+// Para operandos pequeños, utilizar multiplicación clásica.
+const int KARATSUBA_THRESHOLD = 32;
+
+if (max(a.size(), b.size()) <= KARATSUBA_THRESHOLD) {
+    return classicMultiply(a, b);
+}
 
     // Caso base: multiplicación de números de un solo dígito.
     if (a.size() == 1 && b.size() == 1) {
