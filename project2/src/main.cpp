@@ -37,6 +37,7 @@ cout << "000123 * 0045 = "
 cout << "123456789 * 987654321 = "
      << karatsubaMultiply("123456789", "987654321") << endl;
 //Temporal Commit 2
+
     cout << "====================================" << endl;
     cout << "   PRACTICA 2 - KARATSUBA TESTS" << endl;
     cout << "====================================" << endl;
