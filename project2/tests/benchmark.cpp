@@ -71,10 +71,10 @@ double measureKaratsuba(
 
 int main() {
     vector<int> sizes = {
-        16, 32, 64, 128, 256, 512, 1024
+        16, 32, 64, 128, 256, 512, 1024, 2048
     };
 
-    const int repetitions = 7;
+    const int repetitions = 15;
 
     mt19937 generator(12345);
 
